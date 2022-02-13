@@ -9,11 +9,11 @@ public static class Extensions
             {
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<PizzaContext>();
-                if (context.Database.EnsureCreated())
-                {
-                    DbInitializer.Initialize(context);
-                }
+                DbInitializer.Initialize(context);
             }
         }
     }
 }
+
+
+
